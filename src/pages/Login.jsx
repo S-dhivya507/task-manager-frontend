@@ -18,7 +18,7 @@ export default function Login() {
     setError("");
 
     try {
-      const res = await api.post("/auth/login", { email, password });
+      const res = await api.post("https://task-manager-backend-d3rs.onrender.com/auth/login", { email, password });
       login(res.data.token);                      // save JWT in context + localStorage
       navigate("/tasks");                         // redirect to Tasks page
     } catch (err) {
