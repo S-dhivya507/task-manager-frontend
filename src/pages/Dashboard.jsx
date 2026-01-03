@@ -26,7 +26,7 @@ const Dashboard = () => {
 
   const fetchStats = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/tasks", {
+      const res = await axios.get("https://task-manager-backend-d3rs.onrender.com/api/tasks", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
